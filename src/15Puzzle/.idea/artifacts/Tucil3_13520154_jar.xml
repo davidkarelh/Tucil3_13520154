@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="Tucil3_13520154:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/Tucil3_13520154_jar</output-path>
+    <output-path>$PROJECT_DIR$/../../../Tucil3_13520154_jar</output-path>
     <root id="archive" name="15Puzzle.jar">
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/../META-INF/MANIFEST.MF" />

@@ -19,9 +19,13 @@ public class MainForm extends JFrame {
     private JLabel labelNode;
     private JPanel panelStep;
     private JLabel labelSequence;
+    private JPanel panelKurang;
+    private JLabel labelSumKurang;
     public PuzzlePanel puzzlePanel;
     private JFileChooser fileChooser;
     private JScrollPane scrollPane;
+    private JScrollPane kurangScrollpane;
+    private JTable kurangTable;
 
     public MainForm() {
         String[] column = {"Urutan langkah: "};
@@ -52,6 +56,43 @@ public class MainForm extends JFrame {
         this.panelStep.add(scrollPane);
         this.scrollPane.getViewport().setBackground(Color.WHITE);
 //        this.scrollPane.setBorder(BorderFactory.createEmptyBorder());
+
+        String[] kurangColumn = {"KURANG(i): "};
+        String[][] kurangTableData = {
+                {"KURANG(1) = -"},
+                {"KURANG(2) = -"},
+                {"KURANG(3) = -"},
+                {"KURANG(4) = -"},
+                {"KURANG(5) = -"},
+                {"KURANG(6) = -"},
+                {"KURANG(7) = -"},
+                {"KURANG(8) = -"},
+                {"KURANG(9) = -"},
+                {"KURANG(10) = -"},
+                {"KURANG(11) = -"},
+                {"KURANG(12) = -"},
+                {"KURANG(13) = -"},
+                {"KURANG(14) = -"},
+                {"KURANG(15) = -"},
+                {"KURANG(16) = -"},
+        };
+
+        this.kurangTable = new JTable(kurangTableData, kurangColumn);
+        this.kurangTable.setFont(this.kurangTable.getFont().deriveFont(Font.BOLD));
+        this.kurangTable.setBackground(Color.WHITE);
+        this.kurangTable.setShowGrid(false);
+        this.kurangTable.setFocusable(false);
+        this.kurangTable.setRowSelectionAllowed(false);
+        this.kurangTable.setTableHeader(null);
+        this.kurangTable.setBorder(BorderFactory.createEmptyBorder());
+        this.kurangTable.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
+
+        this.kurangScrollpane = new JScrollPane(this.kurangTable);
+        this.kurangScrollpane.getViewport().setBackground(Color.WHITE);
+        this.kurangScrollpane.setBorder(BorderFactory.createEmptyBorder());
+//        this.kurangScrollPane.setBorder(BorderFactory.createEmptyBorder());
+        this.panelKurang.setLayout(new GridLayout(1, 1));
+        this.panelKurang.add(this.kurangScrollpane);
 
         this.setContentPane(this.mainPanel);
         this.setResizable(false);
@@ -94,6 +135,32 @@ public class MainForm extends JFrame {
                     table.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
 
                     scrollPane.getViewport().setView(table);
+
+                    String[] kurangColumn = {"KURANG(i): "};
+                    String[][] kurangTableData = {
+                            {"KURANG(1) = -"},
+                            {"KURANG(2) = -"},
+                            {"KURANG(3) = -"},
+                            {"KURANG(4) = -"},
+                            {"KURANG(5) = -"},
+                            {"KURANG(6) = -"},
+                            {"KURANG(7) = -"},
+                            {"KURANG(8) = -"},
+                            {"KURANG(9) = -"},
+                            {"KURANG(10) = -"},
+                            {"KURANG(11) = -"},
+                            {"KURANG(12) = -"},
+                            {"KURANG(13) = -"},
+                            {"KURANG(14) = -"},
+                            {"KURANG(15) = -"},
+                            {"KURANG(16) = -"},
+                    };
+
+                    for (int i = 0; i < 16; i++) {
+                        kurangTable.setValueAt(kurangTableData[i][0], i, 0);
+                    }
+
+                    labelSumKurang.setText("SUM(KURANG(i) + X = -");
                 }
             }
         });
@@ -132,6 +199,12 @@ public class MainForm extends JFrame {
 
                     panelStep.add(scrollPane);
 
+                    for (int i = 0; i < 16; i++) {
+                        kurangTable.setValueAt("KURANG(" + (i + 1) + ") = " + BranchAndBound.kurang_i[i], i, 0);
+                    }
+
+                    labelSumKurang.setText("SUM(KURANG(i) + X = " + BranchAndBound.sumKurangX);
+
                     puzzlePanel.solve();
 
                 } else {
@@ -157,6 +230,12 @@ public class MainForm extends JFrame {
                     DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
                     centerRenderer.setHorizontalAlignment( JLabel.CENTER );
                     table.getColumnModel().getColumn(0).setCellRenderer( centerRenderer );
+
+                    for (int i = 0; i < 16; i++) {
+                        kurangTable.setValueAt("KURANG(" + (i + 1) + ") = " + BranchAndBound.kurang_i[i], i, 0);
+                    }
+
+                    labelSumKurang.setText("SUM(KURANG(i) + X = " + BranchAndBound.sumKurangX);
 
                     scrollPane.getViewport().setView(table);
                 }

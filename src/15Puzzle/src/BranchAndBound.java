@@ -18,6 +18,8 @@ public class BranchAndBound {
     static public float time;
     static public int stepCount;
     static public String[][] directionString;
+    static public int sumKurangX;
+    static public int[] kurang_i = new int[16];
     static private List<List<Integer>> goal = new ArrayList<List<Integer>>() {{
         add(List.of(1, 2, 3, 4));
         add(List.of(5, 6, 7, 8));
@@ -64,6 +66,8 @@ public class BranchAndBound {
                 }
             }
 
+            BranchAndBound.kurang_i[puzzle.get(i / 4).get(i % 4) - 1] = kurang;
+
             if (puzzle.get(i / 4).get(i % 4) == 16 && (((i / 4) % 2 == 0 && (i % 4) % 2 != 0) || ((i / 4) % 2 != 0 && (i % 4) % 2 == 0))) {
                 X = 1;
             }
@@ -71,6 +75,7 @@ public class BranchAndBound {
             sumKurang += kurang;
         }
 
+        BranchAndBound.sumKurangX = sumKurang + X;
         return (sumKurang + X) % 2 == 0;
     }
 
