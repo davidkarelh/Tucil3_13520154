@@ -106,6 +106,8 @@ Program ini dibuat untuk menyelesaikan Tugas Kecil 3 Strategi Algoritma IF2211 S
 4. Terdapat 2 cara untuk menjalankan <i>file executable<i>, yaitu:
     - Tekan <i>file<i> Tucil3_13520154.jar dua kali, program akan berjalan.
     - Masuk ke dalam terminal, lalu masuk (cd) ke dalam folder/direktori bin pada <i>repsository<i> ini, lalu masukkan java -jar Tucil3_13520154.jar ke dalam terminal.
+5. Program akan terbuka, tekan Pick File untuk memilih file input.
+6. Jika sudah memilih file input, tekan Solve Puzzle untuk mencoba menyelesaikan puzzle. Selama program menampilkan animasi pergerakan ubin, dimohon untuk tidak menekan tombol apapun adalam program.
 
 ## Author
     David Karel Halomoan
