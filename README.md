@@ -9,6 +9,7 @@
     │
     ├───doc
     │       Tucil3_13520154.pdf
+    |       Tucil3_13520154.docx
     │
     ├───src
     │   ├───.idea
