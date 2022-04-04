@@ -83,7 +83,7 @@
             solveable3.txt
 
 ## Keterangan
-Program ini dibuat untuk menyelesaikan Tugas Kecil 3 Strategi Algoritma IF2211 Semester II 2021/2022. Program dibuat dengan menggunakan bantuan kakas (<i>tool<i>) Intellij IDEA 2021.3.2. Jika ingin melakukan kompilasi terhada program, harus menggunakan Intellij IDEA sebab program ini dibuat menggunakan GUI builder dari Intellij IDEA. Untuk memudahkan keperluan pengetesan, pembuat sudah membuat <i>file executable<i> yang dapat dijalankan langsung. Folder/direktori test pada <i>repository<i> ini berisi <i>file<i> yang dapat digunakan untuk <i>test case<i>. Disarankan untuk menggunakan <i>file<i> dengan format .txt sebagai <i>test case<i>.
+Program ini dibuat untuk menyelesaikan Tugas Kecil 3 Strategi Algoritma IF2211 Semester II 2021/2022. Program dibuat dengan menggunakan bantuan kakas (<i>tool<i>) Intellij IDEA 2021.3.2. Jika ingin melakukan kompilasi terhada program, harus menggunakan Intellij IDEA sebab program ini dibuat menggunakan GUI builder dari Intellij IDEA. Untuk memudahkan keperluan pengetesan, pembuat sudah membuat <i>file executable<i> yang dapat dijalankan langsung. Folder/direktori test pada <i>repository<i> ini berisi <i>file<i> yang dapat digunakan untuk <i>test case<i>. Disarankan untuk menggunakan <i>file<i> dengan format .txt sebagai <i>test case<i>. Program ini juga menampilkan pergeseran ubin pada <i>puzzle<i>.
 
 ## Cara Melakukan Kompilasi
 1. Pastikan Intellij IDEA sudah ter-<i>install<i> dalam perangkat, usahakan Intellij IDEA memiliki versi 2021.3.2 untuk mencegah kemungkinan terjadinya permasalahan akibat perbedaan versi dan <i>repository<i> ini sudah di-<i>clone<i> ke dalam perangkat.
